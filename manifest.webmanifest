@@ -1,1 +1,1 @@
-{"name":"Mindcraft — Personal Thinking Gym","short_name":"Mindcraft","start_url":"./","display":"standalone","background_color":"#f7f8f3","theme_color":"#142821","icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{"name": "Mindcraft — Personal Thinking Gym", "short_name": "Mindcraft", "start_url": "./", "display": "standalone", "background_color": "#F7F3E8", "theme_color": "#0F5D3F", "icons": [{"src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable"}]}
