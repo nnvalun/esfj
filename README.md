@@ -1,23 +1,18 @@
-# Mindcraft MVP v0.1
+# Mindcraft — approved editorial UI implementation (v3)
 
-A working offline-first iPhone-installable Progressive Web App with 30 daily quests, 5 skill tracks (including Ne), XP, levels, achievements, journal, pending AI review status, and IndexedDB autosave.
+Implements the approved five-screen visual direction with original local SVG illustrations and the agreed brand palette. Screens: Home, Practice/Daily Quest, Skill Tree with Achievements, Journal, and Settings. This is a working offline-first PWA, not a static mockup.
 
-## Run locally
+## Run
 
-Serve the folder over HTTP: `python3 -m http.server 8080` then open `http://localhost:8080`. A service worker requires HTTPS (or localhost). To install on iPhone, deploy this folder to an HTTPS host such as GitHub Pages, Netlify, or Cloudflare Pages, open the URL in Safari, choose Share > Add to Home Screen, and launch it once online to cache assets.
+`python3 -m http.server 8080` from this directory; open http://localhost:8080. For iPhone installation deploy to HTTPS and use Safari > Share > Add to Home Screen.
 
-## What is NOT implemented
+## Preserved functionality
 
-- Firebase sign-in, cloud synchronization, encrypted cloud backups, recovery key management
-- AI review, mastery assessment, weekly AI growth reports
-- Weekly boss challenges / sophisticated game types (current missions use multiple-choice and writing)
+30 cognitive-thinking quests, multiple-choice exercises, local reflections, XP, skill progress, achievements, journal autosave, JSON export/import, and Light/Dark/System modes. Data stays in IndexedDB on the device.
 
-The UI explicitly marks cloud and AI as not connected. The manual JSON export is unencrypted. Never treat the local copy as an off-device backup. Use Export Backup and store it safely until cloud sync is implemented.
+## Known limitations
 
-## Security notes for next phase
-
-A robust encrypted cloud design requires client-side AES-GCM with a random data encryption key, password/recovery-key wrapping, safe rotation and recovery UX, and authenticated sync. AI review needs separate explicit consent to send selected plaintext to a trusted server-side endpoint, where API keys are kept off-device. Never put service secrets in browser code. Multi-device conflict resolution and reliable retry queues also need implementation.
-
-## Note on learning science
-
-MBTI function labels are conceptual prompts, not clinically validated cognitive metrics. XP measures activity, not proven skill growth.
+- Illustrations are original simplified SVG implementations inspired by the approved visual direction; they are not pixel-perfect reproductions of the generated preview.
+- LINE Seed is specified in the font stack but no font file is bundled; devices without the font use a system fallback.
+- No live AI feedback, cloud backup, or Firebase account. JSON exports are unencrypted.
+- GitHub deployment has not occurred; connector previously returned 403 for write operations.
